@@ -8,6 +8,7 @@
     <title>Правозащитник - юридическая компания</title>
     <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     <script src="./scripts/main.js" type="module"></script>
 </head>
 <body>
@@ -73,7 +74,8 @@
                     </ul>
                 </nav>
             </dialog>
-            <button class="header__burger-button burger-button" type="button" aria-label="Открыть меню" title="Открыть меню" data-js-overlay-menu-burger-button="">
+            <button class="header__burger-button burger-button" type="button" aria-label="Открыть меню"
+                    title="Открыть меню" data-js-overlay-menu-burger-button="">
                 <span class="burger-button__line"></span>
                 <span class="burger-button__line"></span>
                 <span class="burger-button__line"></span>
@@ -81,5 +83,117 @@
         </div>
     </div>
 </header>
+<main>
+    <section class="hero" aria-labelledby="hero-title">
+        <h1 class="visually-hidden" id="hero-title">Юридические услуги</h1>
+        <div class="slider" data-js-slider="">
+            <div class="slider__swiper swiper" data-js-slider-swiper="">
+                <ul class="slider__list swiper-wrapper">
+                    <li class="slider__item swiper-slide">
+                        <article class="hero-card">
+                            <div class="hero-card__body container">
+                                <h2 class="hero-card__title">
+                            <span class="hero-card__title-sub">
+                                Оказываем весь комплекс
+                            </span>
+                                    <span class="hero-card__title-main text-accent">
+                               Юридических услуг
+                           </span>
+                                </h2>
+                                <div class="hero-card__description">
+                                    <p>
+                                        Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
+                                        сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или
+                                        менее
+                                        стандартное заполнение.
+                                    </p>
+                                </div>
+                                <a href="#" class="hero-card__button button">
+                                    Наши услуги
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="slider__item swiper-slide">
+                        <article class="hero-card">
+                            <div class="hero-card__body container">
+                                <h2 class="hero-card__title">
+                            <span class="hero-card__title-sub">
+                                Оказываем весь комплекс
+                            </span>
+                                    <span class="hero-card__title-main text-accent">
+                               Юридических услуг
+                           </span>
+                                </h2>
+                                <div class="hero-card__description">
+                                    <p>
+                                        Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
+                                        сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или
+                                        менее
+                                        стандартное заполнение.
+                                    </p>
+                                </div>
+                                <a href="#" class="hero-card__button button">
+                                    Наши услуги
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="slider__item swiper-slide">
+                        <article class="hero-card">
+                            <div class="hero-card__body container">
+                                <h2 class="hero-card__title">
+                            <span class="hero-card__title-sub">
+                                Оказываем весь комплекс
+                            </span>
+                                    <span class="hero-card__title-main text-accent">
+                               Юридических услуг
+                           </span>
+                                </h2>
+                                <div class="hero-card__description">
+                                    <p>
+                                        Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
+                                        сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или
+                                        менее
+                                        стандартное заполнение.
+                                    </p>
+                                </div>
+                                <a href="#" class="hero-card__button button">
+                                    Наши услуги
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+                <div class="slider__navigation container slider__navigation--abs-bottom">
+                    <div class="slider__pagination" data-js-slider-pagination="">
+                    </div>
+                    <div class="slider__actions">
+                        <button class="slider__arrow-button slider__arrow-button--previous" type="button"
+                                data-js-slider-button-previous="">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.3333 18.3333L5 9.99996L13.3333 1.66663L14.8125 3.14579L7.95833 9.99996L14.8125 16.8541L13.3333 18.3333Z"
+                                      fill="#E6E6E6"/>
+                            </svg>
+                        </button>
+                        <svg aria-hidden="true" width="16" height="30" viewBox="0 0 16 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0.898813" y1="29.1998" x2="14.9267" y2="0.438403" stroke="#E6E6E6"
+                                  stroke-width="2"/>
+                        </svg>
+                        <button class="slider__arrow-button slider__arrow-button--next" type="button"
+                                data-js-slider-button-next="">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.68742 18.3333L5.20825 16.8541L12.0624 9.99996L5.20825 3.14579L6.68742 1.66663L15.0208 9.99996L6.68742 18.3333Z"
+                                      fill="#E6E6E6"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 </body>
 </html>

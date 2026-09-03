@@ -1,0 +1,14 @@
+.button {
+    padding: 16px 24px;
+    color: var(--color-white);
+    background-color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: transparent;
+    }
+}

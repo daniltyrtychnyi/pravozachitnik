@@ -1,6 +1,6 @@
 .header__extra {
     position: relative;
-    z-index: var(--z-index-overlay-menu);
+    z-index: var(--z-layer-header-extra);
     min-height: var(--header-extra-height);
     background-color: var(--color-dark-001);
 }
@@ -39,7 +39,9 @@
 }
 
 .header__main {
-    position: relative;
+    position: absolute;
+    inset-inline: 0;
+    z-index: var(--z-layer-header-main);
     background-color: var(--color-dark-076);
 }
 
@@ -73,7 +75,7 @@
 .header__burger-button {
     position: relative;
     display: none;
-    z-index: var(--z-index-overlay-menu);
+    z-index: var(--z-layer-header-main);
 }
 
 @media (any-hover: hover) {
@@ -95,10 +97,13 @@
 }
 
 @media (width <= 1023px) {
+    .header__main-inner {
+        padding-block: 18px;
+    }
+
     .header__menu-overlay-dialog {
         position: fixed;
         inset: 0;
-        z-index: 10;
         width: 100vw;
         height: 100vh;
         padding: var(--container-padding-x);
