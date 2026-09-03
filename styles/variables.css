@@ -1,0 +1,24 @@
+:root {
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+
+    --color-grey-100: #F7F7F7;
+    --color-grey-200: #F8F5F4;
+    --color-grey-300: #E6E6E6;
+    --color-grey-400: #8C8C8C;
+
+    --color-dark-001: #010101;
+    --color-dark-076: rgba(1, 1, 1, 0.76);
+    --color-dark-222: #222222;
+
+    --color-accent: #4F8FF0;
+
+    --font-family-base: 'NunitoSans', sans-serif;
+
+    --container-width: 1320px;
+    --container-padding-x: 24px;
+
+    --section-padding-y: clamp(40px, 4.17vw, 80px);
+
+    --transition-duration: 0.2s;
+}
