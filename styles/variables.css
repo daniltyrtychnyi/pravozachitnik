@@ -16,9 +16,13 @@
     --font-family-base: 'NunitoSans', sans-serif;
 
     --container-width: 1320px;
-    --container-padding-x: 24px;
+    --container-padding-x: 16px;
 
     --section-padding-y: clamp(40px, 4.17vw, 80px);
 
     --transition-duration: 0.2s;
+
+    --header-extra-height: 53px;
+
+    --z-index-overlay-menu: 100;
 }

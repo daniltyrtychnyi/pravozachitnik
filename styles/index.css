@@ -3,3 +3,7 @@
 @import 'variables.css';
 @import 'globals.css';
 @import 'utils.css';
+
+@import 'components/logo.css';
+@import 'components/burger-button.css';
+@import 'components/header.css';

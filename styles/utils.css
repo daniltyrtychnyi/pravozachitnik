@@ -15,3 +15,8 @@
     clip-path: inset(100%) !important;
     overflow: hidden !important;
 }
+
+.text-accent {
+    color: var(--color-accent);
+    text-transform: uppercase;
+}

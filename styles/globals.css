@@ -1,7 +1,12 @@
+html {
+    &.is-lock {
+        overflow: hidden;
+    }
+}
+
 body {
     font-size: 16px;
     font-family: var(--font-family-base);
-    line-height: 1.2;
     color: var(--color-dark-222);
     background-color: var(--color-white);
 }
@@ -34,18 +39,21 @@ h4, .h4 {
 a {
     color: var(--color-white);
     text-decoration: none;
-
-    &:hover {
-        color: var(--color-accent);
-    }
 }
 
 a, button, svg * {
     transition-duration: var(--transition-duration);
 }
 
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
+@media (any-hover: hover) {
+    a:hover {
+        color: var(--color-accent);
+
+    }
+}
+
+@media (any-hover: none) {
+    a:active {
+        scale: 1.05;
     }
 }

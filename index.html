@@ -11,5 +11,75 @@
     <script src="./scripts/main.js" type="module"></script>
 </head>
 <body>
+<header class="header" data-js-overlay-menu="">
+    <div class="header__extra">
+        <div class="header__extra-inner container">
+            <ul class="header__extra-list">
+                <li class="header__extra-item">
+                    <img src="./assets/icons/phone.svg" alt="" class="header__extra-icon" width="20" height="20">
+                    <a href="tel:+79220229482" class="header__extra-link">+7 (922) 022-94-82</a>
+                </li>
+                <li class="header__extra-item">
+                    <img src="./assets/icons/mail.svg" alt="" class="header__extra-icon" width="20" height="20">
+                    <a href="mailto:janis62@yahoo.com" class="header__extra-link">janis62@yahoo.com</a>
+                </li>
+            </ul>
+            <button class="header__extra-callback" type="button">
+                Заказать звонок
+            </button>
+        </div>
+    </div>
+    <div class="header__main">
+        <div class="header__main-inner container">
+            <a href="./index.html" class="header__logo logo">
+            <span class="header__logo-text-accent logo__text-accent text-accent">
+                Правозащитник
+            </span>
+                юридическая компания
+            </a>
+            <dialog class="header__menu-overlay-dialog" data-js-overlay-menu-dialog="">
+                <nav class="header__menu">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">
+                                Услуги
+                            </a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link is-active">
+                                О компании
+                            </a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">
+                                Наши юристы
+                            </a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">
+                                Отзывы
+                            </a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">
+                                Новости
+                            </a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </dialog>
+            <button class="header__burger-button burger-button" type="button" aria-label="Открыть меню" title="Открыть меню" data-js-overlay-menu-burger-button="">
+                <span class="burger-button__line"></span>
+                <span class="burger-button__line"></span>
+                <span class="burger-button__line"></span>
+            </button>
+        </div>
+    </div>
+</header>
 </body>
 </html>
