@@ -9,9 +9,19 @@
     text-transform: uppercase;
 }
 
+.button--grey-300 {
+    color: var(--color-dark-222);
+    background-color: var(--color-grey-300);
+    border: 2px solid var(--color-grey-300);
+}
+
 @media (any-hover: hover) {
     .button:hover {
         background-color: transparent;
+    }
+
+    .button--grey-300:hover {
+        color: var(--color-dark-222);
     }
 }
 
