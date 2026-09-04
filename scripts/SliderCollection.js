@@ -32,6 +32,10 @@ class Slider {
                 nextSlideMessage: 'Следующий слайд',
                 paginationBulletMessage: 'Перейти к слайду {{index}}',
             },
+            keyboard: {
+                enabled: true,
+                onlyInViewport: true,
+            },
             breakpoints: {
                 769: {
                     allowTouchMove: false,

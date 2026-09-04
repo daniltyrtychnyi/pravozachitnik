@@ -7,8 +7,16 @@
     font-size: 14px;
     line-height: 1.2;
     text-transform: uppercase;
+}
 
-    &:hover {
+@media (any-hover: hover) {
+    .button:hover {
         background-color: transparent;
+    }
+}
+
+@media (any-hover: none) {
+    .button:active {
+        scale: 1.05;
     }
 }
