@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 24px;
+    row-gap: 34px;
 }
 
 .section__title {
@@ -47,5 +47,9 @@
 @media (width <= 768px) {
     .section__header {
         row-gap: 16px;
+    }
+
+    .section__description {
+        font-size: 14px;
     }
 }

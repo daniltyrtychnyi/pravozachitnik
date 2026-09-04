@@ -1,0 +1,21 @@
+.lawyers {
+    background-color: var(--color-grey-100);
+}
+
+.lawyers__list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 24px;
+    overflow: hidden;
+}
+
+@media (width <= 1024px) {
+    .lawyers__list {
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+    }
+
+    .lawyers__item {
+        scroll-snap-align: start;
+    }
+}
