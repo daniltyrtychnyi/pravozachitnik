@@ -1,0 +1,40 @@
+.author-card {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+}
+
+.author-card__image {
+    border-radius: 50%;
+}
+
+.author-card__info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 4px;
+}
+
+.author-card__post {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.author-card__title {
+    font-weight: 700;
+}
+
+@media (width <= 768px) {
+    .author-card {
+        column-gap: 16px;
+    }
+
+    .author-card__image {
+        max-width: 50px;
+    }
+
+    .author-card__title {
+        font-size: 18px;
+    }
+}

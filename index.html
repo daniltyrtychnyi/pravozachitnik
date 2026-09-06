@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Правозащитник - юридическая компания</title>
     <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./styles/index.css">
     <script src="./scripts/main.js" type="module"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
 </head>
 <body>
 <header class="header" data-js-overlay-menu="">
@@ -166,11 +166,12 @@
                         </article>
                     </li>
                 </ul>
-                <div class="slider__navigation container slider__navigation--abs-bottom">
-                    <div class="slider__pagination" data-js-slider-pagination="">
+                <div class="slider-navigation container slider-navigation--abs-bottom" data-js-slider-navigation="">
+                    <div class="slider-navigation__pagination" data-js-slider-pagination="">
                     </div>
-                    <div class="slider__actions">
-                        <button class="slider__arrow-button slider__arrow-button--previous" type="button"
+                    <div class="slider-navigation__actions">
+                        <button class="slider-navigation__arrow-button slider-navigation__arrow-button--previous"
+                                type="button"
                                 data-js-slider-button-previous="">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -183,7 +184,8 @@
                             <line x1="0.898813" y1="29.1998" x2="14.9267" y2="0.438403" stroke="#E6E6E6"
                                   stroke-width="2"/>
                         </svg>
-                        <button class="slider__arrow-button slider__arrow-button--next" type="button"
+                        <button class="slider-navigation__arrow-button slider-navigation__arrow-button--next"
+                                type="button"
                                 data-js-slider-button-next="">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -497,6 +499,174 @@
             </div>
         </div>
     </section>
+    <section class="reviews" aria-labelledby="reviews-title">
+        <div class="reviews__inner container">
+            <header class="reviews__header">
+                <h2 class="reviews__title title-decoration title-decoration--left" id="reviews-title">
+                    Что о нас говорят клиенты
+                </h2>
+                <div class="slider-navigation" id="reviews-navigation" data-js-slider-navigation="">
+                    <div class="slider-navigation__actions slider-navigation__actions--accent">
+                        <button class="slider-navigation__arrow-button slider-navigation__arrow-button--previous"
+                                type="button"
+                                data-js-slider-button-previous="">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.3333 18.3333L5 9.99996L13.3333 1.66663L14.8125 3.14579L7.95833 9.99996L14.8125 16.8541L13.3333 18.3333Z"
+                                      fill="#E6E6E6"/>
+                            </svg>
+                        </button>
+                        <svg aria-hidden="true" width="16" height="30" viewBox="0 0 16 30" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0.898813" y1="29.1998" x2="14.9267" y2="0.438403" stroke="#E6E6E6"
+                                  stroke-width="2"/>
+                        </svg>
+                        <button class="slider-navigation__arrow-button slider-navigation__arrow-button--next"
+                                type="button"
+                                data-js-slider-button-next="">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.68742 18.3333L5.20825 16.8541L12.0624 9.99996L5.20825 3.14579L6.68742 1.66663L15.0208 9.99996L6.68742 18.3333Z"
+                                      fill="#E6E6E6"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <div class="reviews__body">
+                <div class="slider slider--exit-right" data-js-slider="reviews">
+                    <div class="slider__swiper swiper" data-js-slider-swiper="">
+                        <ul class="slider__list swiper-wrapper">
+                            <li class="slider__item swiper-slide">
+                                <article class="review-card">
+                                    <header class="review-card__header">
+                                        <div class="author-card">
+                                            <img src="./assets/images/author-card/1.jpg" alt=""
+                                                 class="author-card__image"
+                                                 width="80" height="80" loading="lazy">
+                                            <div class="author-card__info">
+                                                <p class="author-card__post">ООО “ИТ Консалтинг”</p>
+                                                <h3 class="author-card__title">
+                                                    Логинова Анастасия
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <img src="./assets/icons/stylus.svg" alt="" class="review-card__icon" width="55"
+                                             height="55">
+                                    </header>
+                                    <div class="review-card__description">
+                                        <p>
+                                            Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор
+                                            слов,
+                                            но это не совсем так. Его корни уходят в один фрагмент классической латыни
+                                            45
+                                            года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток,
+                                            профессор
+                                            латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых
+                                            странных
+                                            слов ...
+                                        </p>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="slider__item swiper-slide">
+                                <article class="review-card">
+                                    <header class="review-card__header">
+                                        <div class="author-card">
+                                            <img src="./assets/images/author-card/2.jpg" alt=""
+                                                 class="author-card__image"
+                                                 width="80" height="80" loading="lazy">
+                                            <div class="author-card__info">
+                                                <p class="author-card__post">АО “ПРОМАРШ”</p>
+                                                <h3 class="author-card__title">
+                                                    Макаров Сергей
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <img src="./assets/icons/stylus.svg" alt="" class="review-card__icon" width="55"
+                                             height="55">
+                                    </header>
+                                    <div class="review-card__description">
+                                        <p>
+                                            Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите
+                                            какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные
+                                            генераторы Lorem Ipsum используют один и тот же текст, который они просто
+                                            повторяют, пока не достигнут нужный объём.
+                                        </p>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="slider__item swiper-slide">
+                                <article class="review-card">
+                                    <header class="review-card__header">
+                                        <div class="author-card">
+                                            <img src="./assets/images/author-card/1.jpg" alt=""
+                                                 class="author-card__image"
+                                                 width="80" height="80" loading="lazy">
+                                            <div class="author-card__info">
+                                                <p class="author-card__post">ООО “ИТ Консалтинг”</p>
+                                                <h3 class="author-card__title">
+                                                    Логинова Анастасия
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <img src="./assets/icons/stylus.svg" alt="" class="review-card__icon" width="55"
+                                             height="55">
+                                    </header>
+                                    <div class="review-card__description">
+                                        <p>
+                                            Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор
+                                            слов,
+                                            но это не совсем так. Его корни уходят в один фрагмент классической латыни
+                                            45
+                                            года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток,
+                                            профессор
+                                            латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых
+                                            странных
+                                            слов ...
+                                        </p>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="slider__item swiper-slide">
+                                <article class="review-card">
+                                    <header class="review-card__header">
+                                        <div class="author-card">
+                                            <img src="./assets/images/author-card/2.jpg" alt=""
+                                                 class="author-card__image"
+                                                 width="80" height="80" loading="lazy">
+                                            <div class="author-card__info">
+                                                <p class="author-card__post">АО “ПРОМАРШ”</p>
+                                                <h3 class="author-card__title">
+                                                    Макаров Сергей
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <img src="./assets/icons/stylus.svg" alt="" class="review-card__icon" width="55"
+                                             height="55">
+                                    </header>
+                                    <div class="review-card__description">
+                                        <p>
+                                            Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите
+                                            какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные
+                                            генераторы Lorem Ipsum используют один и тот же текст, который они просто
+                                            повторяют, пока не достигнут нужный объём.
+                                        </p>
+                                    </div>
+                                </article>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="reviews__actions">
+                    <a href="#" class="reviews__all-button button">Все отзывы</a>
+                    <button class="reviews__new-button button button--grey-300" type="button">
+                        Написать отзыв
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 <dialog class="callback-modal" aria-labelledby="callback-title" data-js-callback-modal="">
     <div class="callback-modal__content">
@@ -534,7 +704,8 @@
                             <input id="agreement" name="agreement" type="checkbox" class="field__checkbox-input"
                                    required>
                             <span class="field__checkbox-label">
-                        Я согласен с <a href="#" class="field__checkbox-link">Условиями использования</a> и <a href="#" class="field__checkbox-link">Политикой конфиденциальности</a>
+                        Я согласен с <a href="#" class="field__checkbox-link">Условиями использования</a> и <a href="#"
+                                                                                                               class="field__checkbox-link">Политикой конфиденциальности</a>
                     </span>
                         </label>
                     </div>

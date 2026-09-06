@@ -18,13 +18,13 @@
 @media (width <= 768px) {
     .services {
         width: 100vw;
-        margin-right: calc(var(--container-padding-x) * -1);
     }
 
     .services__list {
         display: flex;
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
+        margin-right: calc(var(--container-padding-x) * -1);
     }
 
     .services__item {
