@@ -8,8 +8,8 @@
     <title>Правозащитник - юридическая компания</title>
     <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     <script src="./scripts/main.js" type="module"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
 </head>
 <body>
 <header class="header" data-js-overlay-menu="">
@@ -25,9 +25,10 @@
                     <a href="mailto:janis62@yahoo.com" class="header__extra-link">janis62@yahoo.com</a>
                 </li>
             </ul>
-            <button class="header__extra-callback" type="button">
+            <button class="header__extra-callback" type="button" data-js-callback-modal-callback-button="">
                 Заказать звонок
             </button>
+
         </div>
     </div>
     <div class="header__main">
@@ -198,7 +199,7 @@
     <section class="services section" aria-labelledby="services-title">
         <div class="section__inner container">
             <header class="section__header">
-                <h2 class="section__title" id="services-title">
+                <h2 class="section__title title-decoration title-decoration--center" id="services-title">
                     Наши услуги
                 </h2>
                 <div class="section__description">
@@ -340,7 +341,7 @@
     </section>
     <section class="about container" aria-labelledby="about-title">
         <div class="about__main">
-            <h2 class="about__title" id="about-title">
+            <h2 class="about__title title-decoration title-decoration--left" id="about-title">
                 Юридическая компания
                 <span class="about__title-text-accent text-accent">
                     правозащитник
@@ -376,7 +377,7 @@
     <section class="lawyers section" aria-labelledby="lawyers-title">
         <div class="section__inner container">
             <header class="section__header">
-                <h2 class="section__title" id="lawyers-title">
+                <h2 class="section__title title-decoration title-decoration--center" id="lawyers-title">
                     Наши юристы
                 </h2>
                 <div class="section__description">
@@ -391,7 +392,7 @@
                     <li class="lawyers__item">
                         <article class="lawyer-card">
                             <img src="./assets/images/lawyer-card/1.jpg" alt="" class="lawyer-card__image" width="312"
-                                 height="309" loading="lazy">
+                                 height="320" loading="lazy">
                             <div class="lawyer-card__body">
                                 <div class="lawyer-card__info">
                                     <h3 class="lawyer-card__title h4">
@@ -417,7 +418,7 @@
                     <li class="lawyers__item">
                         <article class="lawyer-card">
                             <img src="./assets/images/lawyer-card/2.jpg" alt="" class="lawyer-card__image" width="312"
-                                 height="309" loading="lazy">
+                                 height="320" loading="lazy">
                             <div class="lawyer-card__body">
                                 <div class="lawyer-card__info">
                                     <h3 class="lawyer-card__title h4">
@@ -443,7 +444,7 @@
                     <li class="lawyers__item">
                         <article class="lawyer-card">
                             <img src="./assets/images/lawyer-card/3.jpg" alt="" class="lawyer-card__image" width="312"
-                                 height="309" loading="lazy">
+                                 height="320" loading="lazy">
                             <div class="lawyer-card__body">
                                 <div class="lawyer-card__info">
                                     <h3 class="lawyer-card__title h4">
@@ -469,7 +470,7 @@
                     <li class="lawyers__item">
                         <article class="lawyer-card">
                             <img src="./assets/images/lawyer-card/4.jpg" alt="" class="lawyer-card__image" width="312"
-                                 height="309" loading="lazy">
+                                 height="320" loading="lazy">
                             <div class="lawyer-card__body">
                                 <div class="lawyer-card__info">
                                     <h3 class="lawyer-card__title h4">
@@ -497,5 +498,57 @@
         </div>
     </section>
 </main>
+<dialog class="callback-modal" aria-labelledby="callback-title" data-js-callback-modal="">
+    <div class="callback-modal__content">
+        <button class="callback-modal__close-button" type="button" aria-label="Закрыть"
+                data-js-callback-modal-close-button="">
+            <span class="callback-modal__close-button-line"></span>
+            <span class="callback-modal__close-button-line"></span>
+        </button>
+        <div class="callback-modal__main" data-js-callback-modal-main="">
+            <header class="callback-modal__header">
+                <h2 class="callback-modal__title title-decoration title-decoration--center" id="callback-title">
+                    Получить бесплатную консультацию
+                </h2>
+                <div class="callback-modal__description">
+                    <p>
+                        Ответим на ваш вопрос в течение рабочего дня
+                    </p>
+                </div>
+            </header>
+            <form class="callback-modal__form" data-js-callback-modal-form="">
+                <div class="callback-modal__form-body">
+                    <div class="field">
+                        <label for="name" class="field__label">Имя</label>
+                        <input id="name" name="name" class="field__input" placeholder="Иван" autocomplete="name"
+                               required>
+                    </div>
+                    <div class="field">
+                        <label for="tel" class="field__label">Номер телефона</label>
+                        <input id="tel" name="tel" type="tel" class="field__input" placeholder="(999) 999-99-99"
+                               autocomplete="tel"
+                               required data-js-input-imask="">
+                    </div>
+                    <div class="field">
+                        <label for="agreement" class="field__checkbox">
+                            <input id="agreement" name="agreement" type="checkbox" class="field__checkbox-input"
+                                   required>
+                            <span class="field__checkbox-label">
+                        Я согласен с <a href="#" class="field__checkbox-link">Условиями использования</a> и <a href="#" class="field__checkbox-link">Политикой конфиденциальности</a>
+                    </span>
+                        </label>
+                    </div>
+                </div>
+                <button class="callback-modal__form-submit-button button" type="submit"
+                        data-js-callback-modal-submit-button="">
+                    Заказать звонок
+                </button>
+            </form>
+        </div>
+        <p class="callback-modal__message" hidden data-js-callback-modal-message="">
+            Спасибо! Мы свяжемся с вами в ближайшее время.
+        </p>
+    </div>
+</dialog>
 </body>
 </html>

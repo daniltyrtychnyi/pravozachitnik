@@ -6,19 +6,6 @@
 }
 
 .about__title {
-    position: relative;
-    text-transform: uppercase;
-
-    &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -10px;
-        width: 50px;
-        height: 3px;
-        background-color: var(--color-accent);
-    }
-
     &:not(:last-child) {
         margin-bottom: 34px;
     }

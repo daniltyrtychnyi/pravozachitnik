@@ -20,3 +20,26 @@
     color: var(--color-accent);
     text-transform: uppercase;
 }
+
+.title-decoration {
+    position: relative;
+    text-transform: uppercase;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        width: 50px;
+        height: 3px;
+        background-color: var(--color-accent);
+    }
+}
+
+.title-decoration--center::after {
+    left: 50%;
+    translate: -50% -50%;
+}
+
+.title-decoration--left::after {
+    left: 0;
+}

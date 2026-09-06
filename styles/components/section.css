@@ -13,22 +13,6 @@
     row-gap: 34px;
 }
 
-.section__title {
-    position: relative;
-    text-transform: uppercase;
-
-    &::after {
-        content: '';
-        position: absolute;
-        left: 50%;
-        bottom: -10px;
-        translate: -50% -50%;
-        width: 50px;
-        height: 3px;
-        background-color: var(--color-accent);
-    }
-}
-
 .section__description {
     max-width: 920px;
     text-align: center;

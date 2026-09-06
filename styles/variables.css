@@ -20,6 +20,8 @@
 
     --section-padding-y: clamp(40px, 4.17vw, 80px);
 
+    --border: 1px solid var(--color-grey-300);
+
     --transition-duration: 0.2s;
 
     --header-extra-height: 53px;
