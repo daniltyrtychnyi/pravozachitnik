@@ -6,10 +6,6 @@
     cursor: pointer;
 }
 
-.news-card__image-wrapper {
-    position: relative;
-}
-
 .news-card__visible-button {
     position: absolute;
     top: 50%;
@@ -62,6 +58,8 @@
 @media (any-hover: hover) {
     .news-card:hover {
         .news-card__image-wrapper {
+            position: relative;
+
             &::before {
                 content: '';
                 position: absolute;

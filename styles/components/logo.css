@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    font-size: clamp(20px, 1.04vw, 16px);
+    flex-shrink: 0;
+    font-size: clamp(16px, 1.04vw, 20px);
     font-weight: 900;
 }
 

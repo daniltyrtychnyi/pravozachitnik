@@ -19,5 +19,6 @@
 @import 'components/reviews.css';
 @import 'components/slider-navigation.css';
 @import 'components/review-card.css';
-@import 'components/author-card.css';
+@import 'components/person-card.css';
 @import 'components/news-card.css';
+@import 'components/footer.css';
