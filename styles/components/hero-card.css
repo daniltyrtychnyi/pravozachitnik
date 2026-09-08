@@ -35,11 +35,17 @@
 }
 
 .hero-card__description {
-    font-size: 20px;
+    font-size: clamp(16px, 1.04vw, 20px);
     line-height: 1.2;
     color: var(--color-white);
 
     &:not(:last-child) {
         margin-bottom: clamp(32px, 2.5vw, 48px);
+    }
+}
+
+@media (width <= 768px) {
+    .hero-card {
+        min-height: 486px;
     }
 }

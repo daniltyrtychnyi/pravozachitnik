@@ -4,10 +4,11 @@
     flex-direction: column;
     background-color: var(--color-white);
     text-align: center;
-    width: 300px;
+    width: 100%;
+    max-width: 312px;
     height: 100%;
-    box-shadow: 2px 2px 12px 0 rgba(33, 33, 33, 0.12);
     cursor: pointer;
+    box-shadow: var(--shadow);
 }
 
 .lawyer-card__image {

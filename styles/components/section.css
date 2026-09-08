@@ -1,3 +1,7 @@
+.section--grey-100 {
+    background-color: var(--color-grey-100);
+}
+
 .section__inner {
     display: flex;
     flex-direction: column;
@@ -29,8 +33,12 @@
 }
 
 @media (width <= 768px) {
+    .section__inner {
+        row-gap: 24px;
+    }
+
     .section__header {
-        row-gap: 16px;
+        row-gap: 26px;
     }
 
     .section__description {

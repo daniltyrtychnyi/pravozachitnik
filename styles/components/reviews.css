@@ -1,12 +1,11 @@
 .reviews {
-    min-height: 588px;
     background: url('../../assets/images/reviews-bg.jpg') center/cover no-repeat;
 }
 
 .reviews__inner {
     display: flex;
     flex-direction: column;
-    row-gap: 48px;
+    row-gap: 58px;
     padding-block: var(--section-padding-y);
 }
 
@@ -30,7 +29,7 @@
 
 @media (width <= 768px) {
     .reviews__body {
-        row-gap: 24px;
+        row-gap: 34px;
     }
 
     .reviews__actions {

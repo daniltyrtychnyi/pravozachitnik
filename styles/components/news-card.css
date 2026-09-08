@@ -1,0 +1,107 @@
+.news-card {
+    display: grid;
+    row-gap: 24px;
+    max-width: 424px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.news-card__image-wrapper {
+    position: relative;
+}
+
+.news-card__visible-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: var(--z-layer-slider-navigation);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: var(--color-accent);
+    background-color: var(--color-white);
+    border: none;
+    opacity: 0;
+    visibility: hidden;
+
+    svg {
+        user-select: none;
+        pointer-events: none;
+    }
+}
+
+.news-card__body {
+    display: grid;
+    row-gap: 16px;
+}
+
+.news-card__date {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.2;
+
+    &::after {
+        content: '';
+        flex-grow: 1;
+        height: 1px;
+        background-color: var(--color-grey-200);
+    }
+}
+
+.news-card__description {
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+@media (any-hover: hover) {
+    .news-card:hover {
+        .news-card__image-wrapper {
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+                z-index: var(--z-layer-header-main);
+                width: 100%;
+                max-width: 88%;
+                min-height: 230px;
+                background: url('../../assets/images/border.svg') center/contain no-repeat;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: rgba(79, 143, 240, 0.4);
+            }
+        }
+
+        .news-card__title {
+            color: var(--color-accent);
+        }
+
+        .news-card__visible-button {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+@media (width <= 1024px) {
+    .news-card {
+        max-width: 336px;
+    }
+}
+
+@media (width <= 768px) {
+    .news-card {
+        max-width: 250px;
+    }
+}

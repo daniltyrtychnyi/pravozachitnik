@@ -1,9 +1,30 @@
+.slider {
+    --sliderMarginOffsetX: calc(var(--container-padding-x) * -1);
+
+    min-width: 0;
+}
+
+.slider--exit-right {
+    margin-right: var(--sliderMarginOffsetX);
+}
+
+.slider--services {
+    .slider__item {
+        /**
+        Отключаем, высоты вычисляемое Swiper Grid
+        для сохранения высоты карточек.
+         */
+        height: auto !important;
+    }
+}
+
 .slider__item {
+    width: auto;
     height: auto;
 }
 
-@media (width >= 480px) and (width <= 1440px) {
-    .slider--exit-right {
-        margin-right: calc(var(--container-padding-x) * -1);
+@media (width < 768px) {
+    .slider--exit-right-mobile {
+        margin-right: var(--sliderMarginOffsetX);
     }
 }

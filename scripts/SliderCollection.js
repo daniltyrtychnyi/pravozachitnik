@@ -21,15 +21,18 @@ class Slider {
         this.navigationElement = this.sliderId
             ? document.getElementById(`${this.sliderId}-navigation`)
             : this.rootElement.querySelector(this.selectors.navigation)
-        this.paginationElement = this.navigationElement.querySelector(this.selectors.pagination)
-        this.previousButtonElement = this.navigationElement.querySelector(this.selectors.previousButton)
-        this.nextButtonElement = this.navigationElement.querySelector(this.selectors.nextButton)
+
+        if (this.navigationElement) {
+            this.paginationElement = this.navigationElement.querySelector(this.selectors.pagination)
+            this.previousButtonElement = this.navigationElement.querySelector(this.selectors.previousButton)
+            this.nextButtonElement = this.navigationElement.querySelector(this.selectors.nextButton)
+        }
+
         this.init()
     }
 
     init() {
         const swiperOptions = {
-            loop: true,
             navigation: {
                 nextEl: this.nextButtonElement,
                 prevEl: this.previousButtonElement,
@@ -42,11 +45,6 @@ class Slider {
             keyboard: {
                 enabled: true,
                 onlyInViewport: true,
-            },
-            breakpoints: {
-                769: {
-                    allowTouchMove: false,
-                },
             },
             ...this.config,
         }

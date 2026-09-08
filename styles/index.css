@@ -11,10 +11,8 @@
 @import 'components/slider.css';
 @import 'components/hero-card.css';
 @import 'components/section.css';
-@import 'components/services.css';
 @import 'components/service-card.css';
 @import 'components/about.css';
-@import 'components/lawyers.css';
 @import 'components/lawyer-card.css';
 @import 'components/callback-modal.css';
 @import 'components/field.css';
@@ -22,3 +20,4 @@
 @import 'components/slider-navigation.css';
 @import 'components/review-card.css';
 @import 'components/author-card.css';
+@import 'components/news-card.css';
