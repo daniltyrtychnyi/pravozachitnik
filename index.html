@@ -133,7 +133,7 @@
                                         стандартное заполнение.
                                     </p>
                                 </div>
-                                <a href="#" class="hero-card__button button">
+                                <a href="#services" class="hero-card__button button">
                                     Наши услуги
                                 </a>
                             </div>
@@ -158,7 +158,7 @@
                                         стандартное заполнение.
                                     </p>
                                 </div>
-                                <a href="#" class="hero-card__button button">
+                                <a href="#services" class="hero-card__button button">
                                     Наши услуги
                                 </a>
                             </div>
@@ -966,7 +966,7 @@
                     <div class="field">
                         <label for="name" class="field__label">Имя</label>
                         <input id="name" name="name" class="field__input" placeholder="Иван" autocomplete="name"
-                               required>
+                               required data-js-callback-modal-input="">
                     </div>
                     <div class="field">
                         <label for="phone" class="field__label">Номер телефона</label>
@@ -974,7 +974,7 @@
                                autocomplete="tel"
                                pattern="(\+7|8)[\(\s]?\d{3}[\)\s]?\d{3}[\-\s]?\d{2}[\-\s]?\d{2}"
                                title="Номер телефона должен содержать 11 цифр"
-                               required data-js-input-imask="">
+                               required data-js-input-imask="" data-js-callback-modal-input="">
                     </div>
                     <div class="field">
                         <label for="agreement" class="field__checkbox">
@@ -999,8 +999,7 @@
                 </button>
             </form>
         </div>
-        <p class="callback-modal__message" role="status" aria-live="polite" hidden data-js-callback-modal-message="">
-            Спасибо! Мы свяжемся с вами в ближайшее время.
+        <p class="callback-modal__message" role="status" aria-live="polite" data-js-callback-modal-message="">
         </p>
     </div>
 </dialog>

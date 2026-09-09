@@ -30,6 +30,7 @@
     position: relative;
     display: flex;
     margin-left: auto;
+    margin-bottom: 10px;
     padding: 0;
     width: 44px;
     height: 44px;
@@ -84,6 +85,10 @@
 .callback-modal__message {
     font-weight: 600;
     text-align: center;
+
+    &:not(.is-visible) {
+        opacity: 0;
+    }
 }
 
 @media (any-hover: hover) {

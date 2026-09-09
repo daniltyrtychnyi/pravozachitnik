@@ -5,12 +5,14 @@ class CallbackModal {
         closeButton: '[data-js-callback-modal-close-button]',
         main: '[data-js-callback-modal-main]',
         form: '[data-js-callback-modal-form]',
+        input: '[data-js-callback-modal-input]',
         submitButton: '[data-js-callback-modal-submit-button]',
         message: '[data-js-callback-modal-message]',
     }
 
     stateClasses = {
         isLock: 'is-lock',
+        isVisible: 'is-visible',
     }
 
     stateButtonText = {
@@ -20,12 +22,15 @@ class CallbackModal {
 
     submitDelay = 500
 
+    successSubmitMessage = 'Спасибо! Мы свяжемся с вами в ближайшее время.'
+
     constructor() {
         this.rootElement = document.querySelector(this.selectors.root)
         this.callbackButtonElement = document.querySelector(this.selectors.callbackButton)
         this.closeButtonElement = this.rootElement.querySelector(this.selectors.closeButton)
         this.mainElement = this.rootElement.querySelector(this.selectors.main)
         this.formElement = this.rootElement.querySelector(this.selectors.form)
+        this.inputElements = this.rootElement.querySelectorAll(this.selectors.input)
         this.submitButtonElement = this.rootElement.querySelector(this.selectors.submitButton)
         this.messageElement = this.rootElement.querySelector(this.selectors.message)
         this.bindEvents()
@@ -34,6 +39,7 @@ class CallbackModal {
     open() {
         document.documentElement.classList.add(this.stateClasses.isLock)
         this.rootElement.showModal()
+        this.inputElements[0].focus()
     }
 
     close() {
@@ -42,7 +48,8 @@ class CallbackModal {
 
     modalReset() {
         this.mainElement.hidden = false
-        this.messageElement.hidden = true
+        this.messageElement.classList.remove(this.stateClasses.isVisible)
+        this.messageElement.textContent = ''
         this.submitButtonElement.disabled = false
         this.submitButtonElement.textContent = this.stateButtonText.default
     }
@@ -82,8 +89,9 @@ class CallbackModal {
         this.submitButtonElement.textContent = this.stateButtonText.submit
 
         this.timeoutSubmit = setTimeout(() => {
+            this.messageElement.classList.add(this.stateClasses.isVisible)
+            this.messageElement.textContent = this.successSubmitMessage
             this.mainElement.hidden = true
-            this.messageElement.hidden = false
             this.formReset()
         }, this.submitDelay)
 
