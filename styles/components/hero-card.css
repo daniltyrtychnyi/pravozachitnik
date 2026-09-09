@@ -35,8 +35,8 @@
 }
 
 .hero-card__description {
+    max-width: 1090px;
     font-size: clamp(16px, 1.04vw, 20px);
-    line-height: 1.2;
     color: var(--color-white);
 
     &:not(:last-child) {

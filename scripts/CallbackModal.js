@@ -13,6 +13,13 @@ class CallbackModal {
         isLock: 'is-lock',
     }
 
+    stateButtonText = {
+        default: 'Заказать звонок',
+        submit: 'Отправка...',
+    }
+
+    submitDelay = 500
+
     constructor() {
         this.rootElement = document.querySelector(this.selectors.root)
         this.callbackButtonElement = document.querySelector(this.selectors.callbackButton)
@@ -34,10 +41,10 @@ class CallbackModal {
     }
 
     modalReset() {
-        this.submitButtonElement.disabled = false
-        this.submitButtonElement.textContent = 'Заказать звонок'
-        this.messageElement.hidden = true
         this.mainElement.hidden = false
+        this.messageElement.hidden = true
+        this.submitButtonElement.disabled = false
+        this.submitButtonElement.textContent = this.stateButtonText.default
     }
 
     formReset() {
@@ -72,13 +79,13 @@ class CallbackModal {
         event.preventDefault()
 
         this.submitButtonElement.disabled = true
-        this.submitButtonElement.textContent = 'Отправка...'
+        this.submitButtonElement.textContent = this.stateButtonText.submit
 
         this.timeoutSubmit = setTimeout(() => {
-            this.formReset()
-            this.messageElement.hidden = false
             this.mainElement.hidden = true
-        }, 1000)
+            this.messageElement.hidden = false
+            this.formReset()
+        }, this.submitDelay)
 
     }
 

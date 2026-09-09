@@ -26,6 +26,10 @@
         font-size: 14px;
         color: var(--color-grey-400);
     }
+
+    &:focus {
+        border-color: var(--color-accent);
+    }
 }
 
 .field__checkbox {

@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          content="width=device-width, initial-scale=1.0">
     <title>Правозащитник - юридическая компания</title>
     <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
@@ -42,32 +41,32 @@
                 <nav class="header__menu">
                     <ul class="header__menu-list">
                         <li class="header__menu-item">
-                            <a href="#services" class="header__menu-link">
+                            <a href="#services" class="header__menu-link" data-js-overlay-menu-link="">
                                 Услуги
                             </a>
                         </li>
                         <li class="header__menu-item">
-                            <a href="#about" class="header__menu-link is-active">
+                            <a href="#about" class="header__menu-link is-active" data-js-overlay-menu-link="">
                                 О компании
                             </a>
                         </li>
                         <li class="header__menu-item">
-                            <a href="#lawyers" class="header__menu-link">
+                            <a href="#lawyers" class="header__menu-link" data-js-overlay-menu-link="">
                                 Наши юристы
                             </a>
                         </li>
                         <li class="header__menu-item">
-                            <a href="#reviews" class="header__menu-link">
+                            <a href="#reviews" class="header__menu-link" data-js-overlay-menu-link="">
                                 Отзывы
                             </a>
                         </li>
                         <li class="header__menu-item">
-                            <a href="#news" class="header__menu-link">
+                            <a href="#news" class="header__menu-link" data-js-overlay-menu-link="">
                                 Новости
                             </a>
                         </li>
                         <li class="header__menu-item">
-                            <a href="#contacts" class="header__menu-link">
+                            <a href="#contacts" class="header__menu-link" data-js-overlay-menu-link="">
                                 Контакты
                             </a>
                         </li>
@@ -75,6 +74,7 @@
                 </nav>
             </dialog>
             <button class="header__burger-button burger-button" type="button" aria-label="Открыть меню"
+                    aria-expanded="false"
                     title="Открыть меню" data-js-overlay-menu-burger-button="">
                 <span class="burger-button__line"></span>
                 <span class="burger-button__line"></span>
@@ -341,7 +341,7 @@
                         </ul>
                     </div>
                 </div>
-                <a href="#" class="section__button button">
+                <a href="./development.html" class="section__button button">
                     Все услуги
                 </a>
             </div>
@@ -372,10 +372,10 @@
                 </p>
             </div>
             <div class="about__actions">
-                <a href="#" class="about__button button">
+                <a href="./development.html" class="about__button button">
                     История компании
                 </a>
-                <a href="#" class="about__button button button--grey-300">
+                <a href="./development.html" class="about__button button button--grey-300">
                     Сертификаты
                 </a>
             </div>
@@ -677,7 +677,7 @@
                     </div>
                 </div>
                 <div class="reviews__actions">
-                    <a href="#" class="reviews__all-button button">Все отзывы</a>
+                    <a href="./development.html" class="reviews__all-button button">Все отзывы</a>
                     <button class="reviews__new-button button button--grey-300" type="button">
                         Написать отзыв
                     </button>
@@ -802,7 +802,7 @@
                         </ul>
                     </div>
                 </div>
-                <a href="#" class="section__button button">
+                <a href="./development.html" class="section__button button">
                     Все новости
                 </a>
             </div>
@@ -886,7 +886,7 @@
                         </a>
                     </li>
                     <li class="footer__menu-item">
-                        <a href="" class="footer__menu-link is-active">
+                        <a href="./development.html" class="footer__menu-link is-active">
                             Сертификаты
                         </a>
                     </li>
@@ -901,7 +901,7 @@
                         </a>
                     </li>
                     <li class="footer__menu-item">
-                        <a href="" class="footer__menu-link">
+                        <a href="./development.html" class="footer__menu-link">
                             Благотворительность
                         </a>
                     </li>
@@ -934,9 +934,10 @@
     <div class="footer__extra">
         <div class="footer__extra-inner container">
             <p class="footer__extra-copyright">
-                Все права защищены, <time datetime="2023">2023</time>
+                Все права защищены,
+                <time datetime="2023">2023</time>
             </p>
-            <a href="#" class="footer__extra-privacy-link">
+            <a href="./development.html" class="footer__extra-privacy-link">
                 Политика обработки персональных данных
             </a>
         </div>
@@ -968,9 +969,11 @@
                                required>
                     </div>
                     <div class="field">
-                        <label for="tel" class="field__label">Номер телефона</label>
-                        <input id="tel" name="tel" type="tel" class="field__input" placeholder="(999) 999-99-99"
+                        <label for="phone" class="field__label">Номер телефона</label>
+                        <input id="phone" name="phone" type="tel" class="field__input" placeholder="(999) 999-99-99"
                                autocomplete="tel"
+                               pattern="(\+7|8)[\(\s]?\d{3}[\)\s]?\d{3}[\-\s]?\d{2}[\-\s]?\d{2}"
+                               title="Номер телефона должен содержать 11 цифр"
                                required data-js-input-imask="">
                     </div>
                     <div class="field">
@@ -978,8 +981,14 @@
                             <input id="agreement" name="agreement" type="checkbox" class="field__checkbox-input"
                                    required>
                             <span class="field__checkbox-label">
-                        Я согласен с <a href="#" class="field__checkbox-link">Условиями использования</a> и <a href="#"
-                                                                                                               class="field__checkbox-link">Политикой конфиденциальности</a>
+                            Я согласен с
+                                <a href="./development.html" class="field__checkbox-link" target="_blank">
+                                    Условиями использования
+                                </a>
+                                и
+                                <a href="./development.html" class="field__checkbox-link" target="_blank">
+                                    Политикой конфиденциальности
+                                </a>
                     </span>
                         </label>
                     </div>
@@ -990,7 +999,7 @@
                 </button>
             </form>
         </div>
-        <p class="callback-modal__message" hidden data-js-callback-modal-message="">
+        <p class="callback-modal__message" role="status" aria-live="polite" hidden data-js-callback-modal-message="">
             Спасибо! Мы свяжемся с вами в ближайшее время.
         </p>
     </div>

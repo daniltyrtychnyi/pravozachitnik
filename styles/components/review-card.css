@@ -19,6 +19,7 @@
 
 .review-card__description {
     font-size: 14px;
+    line-height: 1.5;
 }
 
 @media (width <= 1024px) {

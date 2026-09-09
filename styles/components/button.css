@@ -1,11 +1,10 @@
 .button {
     padding: 16px 24px;
     color: var(--color-white);
-    background-color: var(--color-accent);
-    border: 2px solid var(--color-accent);
+    background-color: var(--color-accent-alt);
+    border: 2px solid var(--color-accent-alt);
     font-weight: 900;
     font-size: 14px;
-    line-height: 1.2;
     text-transform: uppercase;
 
     &:disabled {
@@ -21,7 +20,7 @@
 
 @media (any-hover: hover) {
     .button:hover {
-        color: var(--color-accent);
+        color: var(--color-accent-alt);
         background-color: transparent;
     }
 

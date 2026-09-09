@@ -26,7 +26,6 @@
 .footer__description {
     max-width: 862px;
     color: var(--color-grey-200);
-    line-height: 1.2;
 }
 
 .footer__body {
@@ -67,13 +66,13 @@
 
 .footer__contacts-label {
     font-size: 12px;
-    line-height: 1.2;
     text-transform: uppercase;
     color: var(--color-grey-400);
 }
 
 .footer__contacts-value {
     color: var(--color-white);
+    line-height: 1.5;
 }
 
 .footer__menu-list {
@@ -104,6 +103,7 @@
     max-width: 424px;
     font-size: 14px;
     color: var(--color-white);
+    line-height: 1.5;
 
     &:not(:last-child) {
         margin-bottom: 24px;

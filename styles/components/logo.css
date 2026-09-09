@@ -5,6 +5,7 @@
     flex-shrink: 0;
     font-size: clamp(16px, 1.04vw, 20px);
     font-weight: 900;
+    line-height: 1.5;
 }
 
 .logo__text-accent {

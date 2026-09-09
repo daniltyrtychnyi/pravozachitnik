@@ -16,6 +16,8 @@
 }
 
 .about__description {
+    line-height: 1.5;
+
     &:not(:last-child) {
         margin-bottom: 32px;
     }
