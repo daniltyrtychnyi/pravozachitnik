@@ -125,10 +125,6 @@
 }
 
 @media (width <= 1024px) {
-    .footer__inner {
-        row-gap: 24px;
-    }
-
     .footer__description {
         display: none;
     }
