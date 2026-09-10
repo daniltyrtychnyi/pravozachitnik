@@ -50,7 +50,7 @@
 
 .footer__contacts-icon-wrapper {
     padding: 12px;
-    background-color: #2c2c2c;
+    background-color: var(--color-dark-044);
 }
 
 .footer__contacts-content {
@@ -111,7 +111,7 @@
 }
 
 .footer__extra {
-    background-color: #181818;
+    background-color: var(--color-dark-018);
 }
 
 .footer__extra-inner {
