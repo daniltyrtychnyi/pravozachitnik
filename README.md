@@ -37,10 +37,10 @@
 2. Клонировать репозиторий:
 
 ```bash
-git clone git@github.com:daniltyrtychnyi/pravozachitnik.git
+git clone https://github.com/daniltyrtychnyi/pravozachitnik.git
 ```
 
-3. Запустить через локальный сервер — браузеры блокируют ES-модули при открытии `index.html` напрямую через `file://` (ограничение CORS):
+3. Запустить через локальный сервер — браузеры блокируют загрузку ES-модулей при открытии `index.html` напрямую через `file://`:
     - **Visual Studio Code** —
       расширение [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer), правый клик
       на `index.html` → *Open with Live Server*
