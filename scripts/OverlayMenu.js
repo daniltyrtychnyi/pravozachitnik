@@ -23,38 +23,48 @@ class OverlayMenu {
         this.bindEvents()
     }
 
-    onBurgerButtonClick = () => {
-        this.burgerButtonElement.classList.toggle(this.stateClasses.isActive)
-
-        const isActive = this.burgerButtonElement.classList.contains(this.stateClasses.isActive)
-
-        this.burgerButtonElement.ariaExpanded = isActive
-        this.burgerButtonElement.ariaLabel = isActive ? this.labels.close : this.labels.open
-        this.burgerButtonElement.title = isActive ? this.labels.close : this.labels.open
-
-        this.dialogElement.open = !this.dialogElement.open
-        document.documentElement.classList.toggle(this.stateClasses.isLock)
+    open() {
+        this.burgerButtonElement.classList.add(this.stateClasses.isActive)
+        this.burgerButtonElement.ariaExpanded = true
+        this.burgerButtonElement.ariaLabel = this.labels.close
+        this.burgerButtonElement.title = this.labels.close
+        this.dialogElement.open = true
+        document.documentElement.classList.add(this.stateClasses.isLock)
     }
 
-    onLinkClick = (event) => {
-        const isLinkClick = event.target.closest(this.selectors.link)
-
-        if (!isLinkClick) {
-            return
-        }
-
+    close() {
         this.burgerButtonElement.classList.remove(this.stateClasses.isActive)
         this.burgerButtonElement.ariaExpanded = false
         this.burgerButtonElement.ariaLabel = this.labels.open
         this.burgerButtonElement.title = this.labels.open
-
         this.dialogElement.open = false
         document.documentElement.classList.remove(this.stateClasses.isLock)
     }
 
+    onBurgerButtonClick = () => {
+        this.dialogElement.open ? this.close() : this.open()
+    }
+
+    onClick = (event) => {
+        const isLink = event.target.closest(this.selectors.link)
+
+        if (!isLink) {
+            return
+        }
+
+        this.close()
+    }
+
+    onMatchMediaChange = (event) => {
+        if (!event.matches) {
+            this.close()
+        }
+    }
+
     bindEvents() {
         this.burgerButtonElement.addEventListener('click', this.onBurgerButtonClick)
-        this.dialogElement.addEventListener('click', this.onLinkClick)
+        this.dialogElement.addEventListener('click', this.onClick)
+        window.matchMedia('(width <= 1024px)').addEventListener('change', this.onMatchMediaChange)
     }
 }
 
